@@ -1,43 +1,17 @@
-let container = document.getElementById("star-container");
-let star = document.querySelectorAll(".star");
-let filled = 0;
+var rating = document.getElementsByClassName("star-rating")[0];
+var star = document.querySelectorAll(".star")
+document.addEventListener("click" , handleClick);
 
-container.addEventListener("click", function(e){
+function handleClick(e){
     let currClicked = e.target.dataset.index;
-    for(let i=0; i<filled; i++){
-        star[i].classList.remove("star-filled");
+    for(let i=0; i<star.length; i++){
+        star[i].style.color = ""
     }
     for(let i=0; i<currClicked; i++){
-        star[i].classList.add("star-filled")
-    }
-     
-    document.getElementById("count").innerText = `Rating Count: ${currClicked}`
-
-    filled= currClicked
-
-})
-
-container.addEventListener("mouseover", function(e){
-    let currClicked = e.target.dataset.index;
-    for(let i=0; i<filled; i++){
-        star[i].classList.remove("star-filled");
-    }
-    for(let i=0; i<currClicked; i++){
-        star[i].classList.add("star-filled")
+        star[i].style.color = "yellow"
     }
 
-})
-
-
-container.addEventListener("mouseleave", function(e){
-    for(let i=0; i<5; i++){
-        star[i].classList.remove("star-filled");
-    }
-    for(let i=0; i<filled; i++){
-        star[i].classList.add("star-filled")
-    }
-
-})
-
-
-
+    document.getElementById("count").textContent = currClicked;
+    
+    
+}

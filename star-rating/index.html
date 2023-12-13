@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rating Component</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>star rating</title>
+    <link rel="stylesheet" href="index.css"/>
 </head>
-
-<body>
-    <div class="container">
-        <h1>Star Rating Component</h1>
-        <div id="star-container" class="star-container">
-            <span class="star" data-index="1">&#9733;</span>
-            <span class="star" data-index="2">&#9733;</span>
-            <span class="star" data-index="3">&#9733;</span>
-            <span class="star" data-index="4">&#9733;</span>
-            <span class="star" data-index="5">&#9733;</span>
-        </div>
-        <h2 id="count">Rating Count: 0</h2>
-    </div>
-
-
-    <script src="index.js"> </script>
+<body style="text-align: center;">
+      <h3>Star Rating Component</h3>
+      <div class="star-rating" style="display: flex; justify-content: center; gap:30px">
+            <div class="star" data-index="1">&#9734;</div>
+            <div class="star" data-index="2">&#9734;</div>
+            <div class="star" data-index="3">&#9734;</div>
+            <div class="star" data-index="4">&#9734;</div>
+            <div class="star" data-index="5">&#9734;</div>
+      </div>
+      <div>Rating Count: <span id="count">0</span></div>
+      <script src="index.js"></script>
 </body>
-
 </html>
